@@ -44,8 +44,7 @@ public class Cell {
 	/** Set this cell's content to EMPTY */
 	public void clear() {
 		
-		
-		content = Player.Empty;
+		this.content = Player.Empty;
 		
 	}
 		

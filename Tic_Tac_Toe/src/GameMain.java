@@ -3,7 +3,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-
 public class GameMain extends JPanel implements MouseListener{
 	//Constants for game 
 	// number of ROWS by COLS cell constants 
@@ -169,12 +168,14 @@ public class GameMain extends JPanel implements MouseListener{
 				}
 			}             
 		} else {        
-			// game over and restart  
-			statusBar.setText("Game Over!");       
+			// game over and restart   
+			initGame();
 		}   
 		
-		//TODO: redraw the graphics on the UI          
-           board.paint(getGraphics());
+		//redraw the graphics on the UI   
+		paintComponent(getGraphics());
+        
+		
 	}
 		
 
