@@ -25,17 +25,17 @@ public class Board {
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
 	public boolean isDraw() {
-		 
+		 boolean drawCheck = true;
 			//checking each cell, if there is an empty cell the game cannot be a draw as there is till one or more moves to be made
 		   for(int row = 0; row < GameMain.ROWS; row++) {
 			   for(int col = 0; col < GameMain.COLS; col++) {
 				   if(cells[row][col].content == Player.Empty) {
-					   return false;
+					   drawCheck = false;
 				   }
 			   }
 		   }
 		
-		   return true;
+		   return drawCheck;
 		
 	}
 	

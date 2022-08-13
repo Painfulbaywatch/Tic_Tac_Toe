@@ -170,15 +170,14 @@ public class GameMain extends JPanel implements MouseListener{
 			}             
 		} else {        
 			// game over and restart  
-			statusBar.setText("Game Over!");
-			initGame();            
+			statusBar.setText("Game Over!");       
 		}   
 		
 		//TODO: redraw the graphics on the UI          
-           paintComponents(null);
+           board.paint(getGraphics());
 	}
 		
-	
+
 	@Override
 	public void mousePressed(MouseEvent e) {
 		//  Auto-generated, event not used
